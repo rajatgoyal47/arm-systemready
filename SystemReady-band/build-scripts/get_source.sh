@@ -133,10 +133,10 @@ get_linux-acs_src()
 {
   if [ -z $ARM_LINUX_ACS_TAG ]; then
       echo "Downloading Arm Linux ACS source code."
-      git clone --depth 1 https://gitlab.arm.com/linux-arm/linux-acs.git linux-acs
+      git clone --depth 1 --branch lpi_fix https://gitlab.arm.com/linux-arm/linux-acs.git linux-acs
   else
       echo "Downloading Arm Linux ACS source code. TAG : ${ARM_LINUX_ACS_TAG}"
-      git clone --depth 1 --branch ${ARM_LINUX_ACS_TAG} https://gitlab.arm.com/linux-arm/linux-acs.git linux-acs
+      git clone --depth 1 --branch lpi_fix https://gitlab.arm.com/linux-arm/linux-acs.git linux-acs
   fi
 
     pushd $TOP_DIR/linux-${LINUX_KERNEL_VERSION}
