@@ -33,14 +33,14 @@ build_sbsa_kernel_driver()
     pushd $TOP_DIR/linux-acs/acs-drv/files
 
     pushd $TOP_DIR/linux-acs
-    if [ -z $SBSA_ACS_TAG ]; then
-        echo "No SBSA ACS tag defined, use latest main branch source"
-        git checkout master
-        git pull --ff-only origin master
-    else
-        echo "Checkout tag $SBSA_ACS_TAG"
-        git checkout --detach "tags/${SBSA_ACS_TAG}"
-    fi
+    #if [ -z $SBSA_ACS_TAG ]; then
+    #    echo "No SBSA ACS tag defined, use latest main branch source"
+    #    git checkout master
+    #    git pull --ff-only origin master
+    #else
+    #    echo "Checkout tag $SBSA_ACS_TAG"
+    #    git checkout --detach "tags/${SBSA_ACS_TAG}"
+    #fi
     popd
 
     rm -rf $TOP_DIR/linux-acs/acs-drv/files/val

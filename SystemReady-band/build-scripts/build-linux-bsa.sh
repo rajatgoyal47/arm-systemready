@@ -28,14 +28,14 @@ build_bsa_kernel_driver()
  pushd $TOP_DIR/linux-acs/acs-drv/files
 
  pushd $TOP_DIR/linux-acs
- if [ -z $BSA_ACS_TAG ]; then
-     echo "No BSA ACS tag defined, use latest main branch source"
-     git checkout master
-     git pull --ff-only origin master
- else
-     echo "Checkout tag $BSA_ACS_TAG"
-     git checkout --detach "tags/${BSA_ACS_TAG}"
- fi
+ #if [ -z $BSA_ACS_TAG ]; then
+ #    echo "No BSA ACS tag defined, use latest main branch source"
+ #    git checkout master
+ #    git pull --ff-only origin master
+ #else
+ #    echo "Checkout tag $BSA_ACS_TAG"
+ #    git checkout --detach "tags/${BSA_ACS_TAG}"
+ #fi
  popd
 
  rm -rf $TOP_DIR/linux-acs/acs-drv/files/val
